@@ -2,79 +2,137 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>My Projects - Archita</title>
-    <link href="https://fonts.googleapis.com/css2?family">
-    <style>
-        body
-        {
-            font-family: 'Poppins',sans-serif;
-            background-color: #f0f2f5;
-            color: #333;
-            line-height: 1.6;
-        }
-
-          header,footer
-        {
-            color: #ffffff;
-            text-align: center;
-            padding: 20px 0;
-        }
-
-        header
-        {
-            background: linear-gradient(to right,#831bcd,#f9620b);
-        }
-
-        footer
-        {
-            background-color: #333;
-        }
-
-        h1,h2
-        {
-            color: #333;
-        }
-
-        p
-        {
-            font-size: 16px;
-        }
-        iframe
-        {
-            border: none;
-        }
-
-        section
-        {
-            margin: 20px auto;
-            padding: 20px;
-            background-color: #ffffff;
-            box-shadow: 0 2px 4px  rgba(red, green, blue, alpha);
-            
-
-        }
-    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Archita's Profile</title>
+    <meta name="description" content="Personal profile page of Archita">
+    <link rel="icon" href="./assets/img/icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
+    <header>
+        <h1>This is Archita, a <span class="about-me"></span></h1>
+        <p>Welcome to My World!</p>
+    </header>
 
-        <header>
-            <h1 style="margin:0;color:#ffffff">My project</h1>
-        </header>
-        <section style="text-align: left;">
-             <h2>Weathcare</h2>
-            <p>A weather and healthcare app providing real-time data and health tips.</p>
-            <p><a href="https://github.com/archita-debug/Weathcare" target="_blank">View Weathcare on GitHub</a></p>
-        </section>
-       
-        <h2 style="color: #76548f; font: size 50px;">Portfolio Website</h2>
-        <p>This very website showcasing my skills and projects.</p>
-        <p><a href="https://github.com/archita-debug" target="_blank">View Portfolio Code</a></p>
+    <section>
+        <h2>About Me</h2>
+        <p>Hello! I'm Archita, and here's a little info about me.</p>
+        <img src="./assets/img/Archita.jpg" alt="Photo of Archita" width="200" height="200">
+    </section>
+    <hr>
 
-        <h2>More Projects</h2>
-        <p>Explore more of my work on GitHub.</p>
-        <p><a href="https://github.com/archita-debug?tab=repositories" target="_blank">My GitHub Repositories</a></p>
-        <footer>
-            <p><a href="index.html">Back to Home</a></p>
-        </footer>
+    <section>
+        <h2>My Technical Skills</h2>
+        <div class="skills-container">
+            <ul class="skills-list">
+                <li>Web Development</li>
+                <li>Graphic Design</li>
+                <li>Programming</li>
+            </ul>
+        </div>
+    </section>
+    <hr>
+
+    <section class="horizontal-scroll">
+        <div class="icon-container">
+            <img src="./assets/img/Html.png" alt="HTML Icon">
+            <img src="./assets/img/css.png" alt="CSS Icon">
+            <img src="./assets/img/js.png" alt="JavaScript Icon">
+            <img src="./assets/img/c.png" alt="C Icon">
+            <img src="./assets/img/python.jpg" alt="python Icon">
+            <img src="./assets/img/java.png" alt="Java Icon">
+            <img src="./assets/img/mysql.jpg" alt="mysql Icon">
+            <img src="./assets/img/figma.png" alt="figma Icon">
+        </div>
+    </section>
+    <hr>
+
+    <section id="programming-languages">
+        <h2>Programming Languages</h2>
+        <div class="skill">
+            <p>JavaScript</p>
+            <div class="progress-bar" data-progress="80"></div>
+        </div>
+        <div class="skill">
+            <p>HTML</p>
+            <div class="progress-bar" data-progress="90"></div>
+        </div>
+        <div class="skill">
+            <p>CSS</p>
+            <div class="progress-bar" data-progress="70"></div>
+        </div>
+    </section>
+    <hr>
+
+    <section>
+        <h2>My Projects</h2>
+        <p>Take a look at some of my work.</p>
+        <div id="projects">
+            <div class="project-thumbnail">
+                <div class="thumbnail-content">
+                    <img src="https://via.placeholder.com/300x200" alt="Project 1">
+                    <h3>Weathcare</h3>
+                    <p>Weather-based health suggestion app.</p>
+                    <a href="project.html" class="btn">Know More</a>
+                </div>
+            </div>
+            <div class="project-thumbnail">
+                <div class="thumbnail-content">
+                    <img src="https://via.placeholder.com/300x200" alt="Project 2">
+                    <h3>Portfolio Website</h3>
+                    <p>Responsive portfolio website using HTML, CSS, JS.</p>
+                    <a href="project.html" class="btn">Know More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <hr>
+
+    <section>
+        <h2>Contact Me</h2>
+        <form>
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Your Name">
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Your Email">
+            </div>
+
+            <div class="form-group">
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" placeholder="Your Message"></textarea>
+            </div>
+
+            <button type="submit">Submit Message</button>
+        </form>
+    </section>
+    <hr>
+
+    <section>
+        <h2>Contact Information</h2>
+        <p>Let's connect!</p>
+        <p>
+            <a href="https://www.linkedin.com/in/archita-bhalotia-15b8382a5" class="icon-link linkedin-icon">
+                <i class="fab fa-linkedin" aria-hidden="true"></i>
+            </a>
+            <a href="mailto:arbhalotia123@gmail.com" class="icon-link email-icon">
+                <i class="fas fa-envelope" aria-hidden="true"></i>
+            </a>
+        </p>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Archita. Built by Archita.</p>
+    </footer>
+
+    <div id="dark-mode-toggle" class="dark-mode-toggle">
+        <i class="fas fa-moon"></i>
+    </div>
 </body>
 </html>
