@@ -1,0 +1,329 @@
+body
+{
+    font-family: 'Poppins',sans-serif;
+    background-color: #f0f2f5;
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+hr{
+    width: 50%;
+    margin: 20px auto;
+    border-top: 3px solid #242323;
+}
+
+h1,h2{
+    font-weight: 700;
+}
+
+p,a{
+    font-weight: 400;
+}
+
+a{
+    font-weight: 400;
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover{
+    color: #0056b3;
+}
+
+.fas,.fab{
+    margin-right: 1px;
+    color: inherit;
+}
+
+.icon-link{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 10px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 24px;
+    transition: transform 0.3s ease;
+}
+
+.linkedin-icon {
+    background-color: #0e76a8; /* LinkedIn Blue */
+}
+
+.email-icon {
+    background-color: #dd4b39; /* Gmail Red */
+}
+
+.icon-link:hover{
+    transform: scale(1.1);
+    color: #fff;
+}
+
+header,footer{
+    background: linear-gradient(to right,#510d04,#0a0000);
+    color: #fff;
+    padding: 40px 0;
+    text-align: center;
+    width: 100%;
+}
+
+section{
+    padding: 10px;
+    text-align: center;
+    width: 80%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+img{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    box-shadow:0 5px 15px rgba(0, 0, 0, 0.2);
+    object-fit: cover;
+}
+
+.skills-container {
+    display: flex;
+    justify-content: center;
+}
+
+.skills-list{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 30px;
+}
+
+.skills-list li{
+    list-style-type: none;
+    background: #f0f2f5;
+    padding: 10px 15px;
+    border-radius: 5px;
+    box-shadow:0 2px 4px rgba(0, 0, 0, 0.1);
+    animation: bounce 1s infinite alternate;
+}
+
+.skills-list li:hover {
+    transform: translateY(-2px);
+    transition: transform 0.3s ease;
+}
+
+
+form{
+    margin: 20px auto;
+    padding: 20px;
+    width: 100%;
+    max-width: 500px;
+    box-shadow:0 5px 15px rgba(0, 0, 0, 0.1);
+    background: #fff;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.form-group{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+.form-group label{
+    margin-bottom: 5px;
+    color: #333;
+}
+
+form input[type="text"],form input[type="email"],form textarea,form button{
+    width: 90%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 5px 0;
+}
+
+form button{
+    background-image: linear-gradient(to right,#510d04,#0a0000);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+form button:hover{
+     background-image: linear-gradient(to right,#510d04,#0a0000);
+}
+
+
+/* responsive design adjustment for smaller device */
+@media only screen and (max-width: 768px) {
+    .skills-list {
+        flex-direction: column;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    header, footer {
+        padding: 15px;
+    }
+
+    section, form {
+        width: 90%;
+        margin: 10px auto;
+    }
+
+    .icon-link {
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
+        margin: 0 5px;
+    }
+
+    h1, h2 {
+        font-size: 20px;
+    }
+}
+
+@keyframes bounce{
+    form{
+        transform: translateY(0);
+    }
+    to{
+        transform: translateY(-15px);
+    }
+}
+
+.horizontal-scroll{
+    overflow-x: hidden;
+    width: 100%;
+}
+
+.icon-container{
+    display: flex;
+    animation: scrollAnimation 10s linear infinite;
+    width: max-content;
+}
+
+.icon-container img{
+    width: 60px;
+    height: 60px;
+    margin-right: 20px;
+}
+
+@keyframes scrollAnimation{
+    0%{
+        transform: translateX(100vw);
+    }
+    100%{
+        transform: translateX(-100%);
+    }
+}
+
+.dark-mode{
+    background-color: #333;
+    color: #fff;
+}
+
+.dark-mode button{
+    background-color: #555;
+    color: #fff;
+}
+
+.dark-mode p{
+    color: #fff;
+}
+
+#programming-languages{
+    margin-top: 50px;
+}
+
+#programming-languages .skill{
+    margin-bottom: 20px;
+}
+
+#programming-languages .progress-bar{
+    width: 0;
+    height: 20px;
+    background: linear-gradient(to right,#510d04,#0a0000);
+    border-radius: 10px;
+}
+
+#programming-languages .progress{
+    height: 100%;
+    background: transparent;
+    border-radius: 10px;
+}
+
+#programming-languages .progress-bar .animated{
+    animation: animateProgress 1s ease forwards;
+}
+
+@keyframes animateProgress{
+    to{
+        width: var(--progress);
+    }
+}
+
+#projects{
+    display: grid;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.project-thumbnail{
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    box-shadow:0 9px 9px rgba(0, 0, 0, 0.1);
+}
+
+.thumbnail-content{
+    padding: 0px 0px 20px 0px;
+}
+
+.thumbnail-content img{
+    width: 100%;
+    border-radius: 8px 8px 0px 0px;
+}
+
+.thumbnail-content h3{
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+.thumbnail-content p{
+    margin-top: 10px;
+}
+
+.thumbnail-content .btn{
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #831bcd;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.thumbnail-content .btn:hover{
+    background-color: #f9620b;
+}
+
+@media only screen and (max-width: 768px) {
+    #projects {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    #projects {
+        grid-template-columns: 1fr;
+    }
+}
