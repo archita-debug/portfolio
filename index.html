@@ -9,15 +9,7 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
-    <script defer>
-        document.addEventListener("DOMContentLoaded", function () {
-            document.querySelectorAll('.progress-bar').forEach(bar => {
-                const progress = bar.getAttribute('data-progress');
-                bar.style.setProperty('--progress', progress + '%');
-                bar.style.width = progress + '%';
-            });
-        });
-    </script>
+    <script src="script.js" defer></script>
 </head>
 <body>
     <header>
@@ -46,9 +38,14 @@
 
     <section class="horizontal-scroll">
         <div class="icon-container">
-            <img src="./assets/img/html-icon.png" alt="HTML Icon">
-            <img src="./assets/img/css-icon.png" alt="CSS Icon">
-            <img src="./assets/img/js-icon.png" alt="JavaScript Icon">
+            <img src="./assets/img/Html.png" alt="HTML Icon">
+            <img src="./assets/img/css.png" alt="CSS Icon">
+            <img src="./assets/img/js.png" alt="JavaScript Icon">
+            <img src="./assets/img/c.png" alt="C Icon">
+            <img src="./assets/img/python.jpg" alt="python Icon">
+            <img src="./assets/img/java.png" alt="Java Icon">
+            <img src="./assets/img/mysql.jpg" alt="mysql Icon">
+            <img src="./assets/img/figma.png" alt="figma Icon">
         </div>
     </section>
     <hr>
@@ -61,11 +58,11 @@
         </div>
         <div class="skill">
             <p>HTML</p>
-            <div class="progress-bar" data-progress="80"></div>
+            <div class="progress-bar" data-progress="90"></div>
         </div>
         <div class="skill">
             <p>CSS</p>
-            <div class="progress-bar" data-progress="80"></div>
+            <div class="progress-bar" data-progress="70"></div>
         </div>
     </section>
     <hr>
