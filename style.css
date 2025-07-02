@@ -232,6 +232,7 @@ form button:hover{
 .dark-mode button{
     background-color: #555;
     color: #fff;
+    align-items: center;
 }
 
 .dark-mode p{
@@ -246,11 +247,12 @@ form button:hover{
     margin-bottom: 20px;
 }
 
-#programming-languages .progress-bar{
-    width: 0;
+#programming-languages .progress-bar {
     height: 20px;
-    background: linear-gradient(to right,#510d04,#0a0000);
+    width: 0; /* Start at 0 */
+    background: linear-gradient(to right, #510d04, #0a0000);
     border-radius: 10px;
+    transition: width 1s ease-in-out;
 }
 
 #programming-languages .progress{
